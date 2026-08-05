@@ -16,9 +16,9 @@
    <img src="images/ScreenShot_2026-08-05_102517_126.png" alt="DIJI-NES Photo" width="70%">
 </p>
 
-
-<img width="690" height="826" alt="image" src="https://github.com/user-attachments/assets/cbcf1a5a-40ed-4399-b668-09d19765464c" />
-
+<p align="center">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/cbcf1a5a-40ed-4399-b668-09d19765464c" />
+</p>
 ---
 
 ESP32-S3 上运行的 NES（任天堂红白机）模拟器，支持显示、音频和控制器。
