@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "DIJI-NES",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {
+        "flashSize": "16",
+        "psramSize": "8"
+      }
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "lcd",
+      "top": -30,
+      "left": 360,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnA",
+      "top": 292,
+      "left": 330,
+      "attrs": {
+        "color": "green",
+        "label": "A"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnStart",
+      "top": 292,
+      "left": 415,
+      "attrs": {
+        "color": "blue",
+        "label": "START"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnUp",
+      "top": 235,
+      "left": 505,
+      "attrs": {
+        "color": "yellow",
+        "label": "UP"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnDown",
+      "top": 292,
+      "left": 505,
+      "attrs": {
+        "color": "yellow",
+        "label": "DOWN"
+      }
+    }
+  ],
+  "connections": [
+    [ "esp:3V3", "lcd:VCC", "red", [ "h45", "v-120", "h435", "v260" ] ],
+    [ "esp:GND.1", "lcd:GND", "black", [ "h70", "v110", "h420", "v-60" ] ],
+    [ "esp:3V3", "lcd:LED", "red", [ "h55", "v-132", "h475", "v300" ] ],
+    [ "esp:5", "lcd:CS", "green", [ "h90", "v-45", "h355", "v265" ] ],
+    [ "esp:13", "lcd:RST", "gray", [ "h125", "v-70", "h335", "v250" ] ],
+    [ "esp:2", "lcd:D/C", "blue", [ "h145", "v-30", "h355", "v220" ] ],
+    [ "esp:12", "lcd:MOSI", "orange", [ "h175", "v20", "h320", "v170" ] ],
+    [ "esp:14", "lcd:SCK", "yellow", [ "h190", "v45", "h300", "v145" ] ],
+    [ "esp:4", "lcd:MISO", "purple", [ "h215", "v75", "h275", "v115" ] ],
+    [ "esp:6", "btnA:1.r", "green", [ "h520", "v235" ] ],
+    [ "btnA:2.r", "esp:GND.2", "black", [ "v60", "h-545", "v-180" ] ],
+    [ "esp:7", "btnStart:1.r", "blue", [ "h585", "v240" ] ],
+    [ "btnStart:2.r", "esp:GND.2", "black", [ "v80", "h-640", "v-200" ] ],
+    [ "esp:15", "btnUp:1.r", "yellow", [ "h670", "v105" ] ],
+    [ "btnUp:2.r", "esp:GND.2", "black", [ "v140", "h-745", "v-260" ] ],
+    [ "esp:16", "btnDown:1.r", "yellow", [ "h690", "v225" ] ],
+    [ "btnDown:2.r", "esp:GND.2", "black", [ "v100", "h-765", "v-220" ] ]
+  ],
+  "dependencies": {}
+}

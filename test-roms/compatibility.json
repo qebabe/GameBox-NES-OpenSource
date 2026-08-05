@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "roms": [
+    {"file":"ambushed.nes","status":"pending-hardware","notes":""},
+    {"file":"croom.nes","status":"pending-hardware","notes":""},
+    {"file":"dabg.nes","status":"pending-hardware","notes":""},
+    {"file":"driar.nes","status":"pending-hardware","notes":"Mapper 1"},
+    {"file":"flappyblock.nes","status":"pending-hardware","notes":"input smoke test"},
+    {"file":"invaders.nes","status":"pending-hardware","notes":"audio smoke test"},
+    {"file":"pong1k.nes","status":"pending-hardware","notes":"first bring-up"},
+    {"file":"robotfindskitten.nes","status":"pending-hardware","notes":""},
+    {"file":"thwaite.nes","status":"pending-hardware","notes":""},
+    {"file":"tigerjenny.nes","status":"pending-hardware","notes":"larger Mapper 0 game"}
+  ]
+}

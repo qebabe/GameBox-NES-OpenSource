@@ -1,0 +1,5 @@
+#pragma once
+
+// 复制为 service_config.local.h 后填写自己的 HTTPS 服务地址。
+// service_config.local.h 已被 .gitignore 排除，请勿提交生产地址或凭据。
+#define DIJI_SERVICE_ORIGIN "https://nes.example.com"

@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = ".pio/build/wokwi-lcdwiki/firmware.bin"
+elf = ".pio/build/wokwi-lcdwiki/firmware.elf"

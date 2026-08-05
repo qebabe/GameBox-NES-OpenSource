@@ -1,0 +1,42 @@
+# PlatformIO build directory
+.pio/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local game ROM library and vendor reference docs
+/rom/
+/data/
+/dist/
+/game/
+/firmware/
+/tools/rom_api/
+*.pdf
+
+# 私有服务配置：公开仓库仅保留示例文件
+/src/service_config.local.h
+
+# 本地日志、转储、数据库、密钥和发布包
+*.log
+*.pid
+*.db
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.p12
+*.pfx
+*.zip
+*.tar
+*.tar.gz
+
+# 用户自行准备的游戏内容；测试清单和说明仍可公开
+*.nes

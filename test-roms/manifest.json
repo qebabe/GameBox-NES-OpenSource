@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "roms": [
+    {"file":"ambushed.nes","mapper":0,"size":16400,"sha256":"c4efb1e252e39dd957ecc76ff2a868159bb3a6dc66e07addfcdbf9e6660dfb62"},
+    {"file":"croom.nes","mapper":0,"size":24592,"sha256":"2ce17df1ad66a8a0533c0a8739f5b5ebe275c264924bbe350c42c5ac0394f20e"},
+    {"file":"dabg.nes","mapper":0,"size":24592,"sha256":"30a4c063ec8a3d375bb59c62685c4a0ac2c74fbfdf71198115c4ee5cd9ba98a1"},
+    {"file":"driar.nes","mapper":1,"size":131088,"sha256":"b45b0e075ac21eb11cff7c0607a23eaf586a318e4d944aaf7af3e1b0d7cbfea1"},
+    {"file":"flappyblock.nes","mapper":0,"size":16400,"sha256":"2e5ba49fdcda83e0dc406887f2390e3fba3f46e11f38fd197de32168ccc3302f"},
+    {"file":"invaders.nes","mapper":0,"size":32784,"sha256":"47808051322a9c21bc34ee86cc55aedc29948be8bb42ab58c27c3e78d4b6f020"},
+    {"file":"pong1k.nes","mapper":0,"size":16400,"sha256":"dd734884cb03feabbc05d60cba0cfccbf1d2386ed9d3b1e3c09ca5dba95630da"},
+    {"file":"robotfindskitten.nes","mapper":0,"size":32784,"sha256":"13abbea91f553780c88c2a85a40b7e86fd5916026c01bfc4f88a8b9b9a9abfe1"},
+    {"file":"thwaite.nes","mapper":0,"size":24592,"sha256":"3543ebf804f80abb19acfde4630a909a7485e2d69487900fd93b5698c412adc5"},
+    {"file":"tigerjenny.nes","mapper":0,"size":40976,"sha256":"e38d46a9e6cf5e3775e2214ec97b865b5a3c22c82b6e826fc1fa21f03405df2b"}
+  ]
+}
