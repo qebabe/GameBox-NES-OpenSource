@@ -1,4 +1,4 @@
-# DIJI-NES
+# GameBox-NES
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-ESP32--S3-blue" alt="Platform">
@@ -13,7 +13,7 @@
 > This is a learning project for understanding NES emulation and embedded systems programming. Some features are still under development.
 
 <p align="center">
-   <img src="./images/DIJI-NES_photo.jpg" alt="DIJI-NES Photo" width="70%">
+   <img src="images/ScreenShot_2026-08-05_102517_126.png" alt="DIJI-NES Photo" width="70%">
 </p>
 
 ---
@@ -87,16 +87,16 @@ A NES (Nintendo Entertainment System) emulator running on ESP32-S3 microcontroll
 
 ## 🎮 兼容性
 
-| Mapper | 名称   | 状态     |
-|--------|--------|----------|
-| 0      | NROM   | ✅ 正常   |
-| 1      | MMC1   | ✅ 正常   |
-| 2      | UxROM  | ✅ 正常   |
-| 3      | CNROM  | ✅ 正常   |
-| 4      | MMC3   | ✅ 大部分正常 |
-| 7      | AxROM  | ⚠️ 待真机兼容性回归 |
-| 66     | GxROM  | ⚠️ 待真机兼容性回归 |
 
+| Mapper | 名称  | 状态                  |
+| ------ | ----- | --------------------- |
+| 0      | NROM  | ✅ 正常               |
+| 1      | MMC1  | ✅ 正常               |
+| 2      | UxROM | ✅ 正常               |
+| 3      | CNROM | ✅ 正常               |
+| 4      | MMC3  | ✅ 大部分正常         |
+| 7      | AxROM | ⚠️ 待真机兼容性回归 |
+| 66     | GxROM | ⚠️ 待真机兼容性回归 |
 
 ### 项目状态
 
@@ -106,15 +106,16 @@ A NES (Nintendo Entertainment System) emulator running on ESP32-S3 microcontroll
 
 ## Compatibility
 
-| Mapper | Name   | Status |
-|--------|--------|--------|
-| 0      | NROM   | Supported |
-| 1      | MMC1   | Supported |
-| 2      | UxROM  | Supported |
-| 3      | CNROM  | Supported |
-| 4      | MMC3   | Mostly supported |
-| 7      | AxROM  | Awaiting hardware regression |
-| 66     | GxROM  | Awaiting hardware regression |
+
+| Mapper | Name  | Status                       |
+| ------ | ----- | ---------------------------- |
+| 0      | NROM  | Supported                    |
+| 1      | MMC1  | Supported                    |
+| 2      | UxROM | Supported                    |
+| 3      | CNROM | Supported                    |
+| 4      | MMC3  | Mostly supported             |
+| 7      | AxROM | Awaiting hardware regression |
+| 66     | GxROM | Awaiting hardware regression |
 
 ### Project Status
 
@@ -126,12 +127,13 @@ A small number of games with non-standard timing, special mappers, or bootleg ma
 
 ## 📊 性能
 
-| 指标       | 数值          |
-|------------|---------------|
+
+| 指标       | 数值                                           |
+| ---------- | ---------------------------------------------- |
 | 模拟 FPS   | 大部分游戏约 57-61 FPS；重精灵场景约 55-58 FPS |
-| 音频采样率 | 44100 Hz      |
-| Flash 使用 | ~490 KB (7.5%) |
-| RAM 使用   | ~52 KB (16%)  |
+| 音频采样率 | 44100 Hz                                       |
+| Flash 使用 | ~490 KB (7.5%)                                 |
+| RAM 使用   | ~52 KB (16%)                                   |
 
 > 注：v0.3.0 优先保证精灵显示正确性与横向卷轴边缘稳定性。相比最激进的固定隔帧跳帧方案，部分场景可能低约 1 FPS，但可避免《超级马里奥兄弟》等游戏在受伤/闪烁阶段出现角色消失。
 >
@@ -139,12 +141,13 @@ A small number of games with non-standard timing, special mappers, or bootleg ma
 
 ## Performance
 
-| Metric | Value |
-|--------|-------|
-| Emulation FPS | Most games around 57-61 FPS; object-heavy scenes around 55-58 FPS |
-| Audio sample rate | 44100 Hz |
-| Flash usage | ~490 KB (7.5%) |
-| RAM usage | ~52 KB (16%) |
+
+| Metric            | Value                                                             |
+| ----------------- | ----------------------------------------------------------------- |
+| Emulation FPS     | Most games around 57-61 FPS; object-heavy scenes around 55-58 FPS |
+| Audio sample rate | 44100 Hz                                                          |
+| Flash usage       | ~490 KB (7.5%)                                                    |
+| RAM usage         | ~52 KB (16%)                                                      |
 
 > Note: v0.3.0 prioritizes sprite correctness and stable horizontal scrolling edges. Compared with the most aggressive fixed frame-skip mode, some scenes may be about 1 FPS slower, but this avoids disappearing sprites during damage/blinking effects in games such as Super Mario Bros.
 >
@@ -154,23 +157,25 @@ A small number of games with non-standard timing, special mappers, or bootleg ma
 
 ## 🛠️ 硬件需求
 
-| 组件       | 规格                                              |
-|------------|---------------------------------------------------|
-| **MCU**    | ESP32-S3-N16R8 (双核 240MHz, 16MB Flash, 8MB PSRAM) |
-| **显示屏** | ST7789 或 ILI9341 TFT LCD 320×240 (SPI)            |
-| **音频 DAC** | MAX98357A I2S DAC                                 |
-| **存储**   | SD 卡 (FAT32, 存放 ROM 文件)                       |
-| **输入**   | 8 个按键 (直连 GPIO)                              |
+
+| 组件         | 规格                                                |
+| ------------ | --------------------------------------------------- |
+| **MCU**      | ESP32-S3-N16R8 (双核 240MHz, 16MB Flash, 8MB PSRAM) |
+| **显示屏**   | ST7789 或 ILI9341 TFT LCD 320×240 (SPI)            |
+| **音频 DAC** | MAX98357A I2S DAC                                   |
+| **存储**     | SD 卡 (FAT32, 存放 ROM 文件)                        |
+| **输入**     | 8 个按键 (直连 GPIO)                                |
 
 ## Hardware
 
-| Component | Specification |
-|-----------|---------------|
-| **MCU** | ESP32-S3-N16R8 (dual-core 240MHz, 16MB Flash, 8MB PSRAM) |
-| **Display** | ST7789 or ILI9341 TFT LCD 320x240 (SPI) |
-| **Audio DAC** | MAX98357A I2S DAC |
-| **Storage** | SD card (FAT32, stores ROM files) |
-| **Input** | 8 buttons (direct GPIO wiring) |
+
+| Component     | Specification                                            |
+| ------------- | -------------------------------------------------------- |
+| **MCU**       | ESP32-S3-N16R8 (dual-core 240MHz, 16MB Flash, 8MB PSRAM) |
+| **Display**   | ST7789 or ILI9341 TFT LCD 320x240 (SPI)                  |
+| **Audio DAC** | MAX98357A I2S DAC                                        |
+| **Storage**   | SD card (FAT32, stores ROM files)                        |
+| **Input**     | 8 buttons (direct GPIO wiring)                           |
 
 ---
 
@@ -209,12 +214,14 @@ LCDWIKI 板型使用 ILI9341 屏幕、SDIO MicroSD、FT6336 触摸和板载 ES83
 该板的 `GPIO2/GPIO3/GPIO14/GPIO21` 四个扩展 IO 映射为 `A/START/UP/DOWN`；完整游戏操作可使用触摸控制、串口控制或 ESP-NOW 手柄。
 
 ### SD 卡
-| 功能   | GPIO |
-|--------|------|
-| CS     | 42   |
-| SCLK   | 40   |
-| MISO   | 39   |
-| MOSI   | 41   |
+
+
+| 功能 | GPIO |
+| ---- | ---- |
+| CS   | 42   |
+| SCLK | 40   |
+| MISO | 39   |
+| MOSI | 41   |
 
 ### SD 卡壁纸与上传网页
 
@@ -236,8 +243,10 @@ LCDWIKI 板型使用 ILI9341 屏幕、SDIO MicroSD、FT6336 触摸和板载 ES83
 退出整个系统设置后服务和临时热点会关闭；如果网页修改过 ROM，设备会重新扫描 SD 卡并刷新本地游戏列表。删除 ROM 时不会自动删除对应存档。
 
 ### 控制器按键
+
+
 | 按键   | GPIO |
-|--------|------|
+| ------ | ---- |
 | A      | 48   |
 | B      | 47   |
 | SELECT | 16   |
@@ -248,20 +257,24 @@ LCDWIKI 板型使用 ILI9341 屏幕、SDIO MicroSD、FT6336 触摸和板载 ES83
 | RIGHT  | 18   |
 
 ### I2S 音频
-| 功能   | GPIO |
-|--------|------|
-| BCLK   | 5    |
-| LRC    | 4    |
-| DOUT   | 6    |
+
+
+| 功能 | GPIO |
+| ---- | ---- |
+| BCLK | 5    |
+| LRC  | 4    |
+| DOUT | 6    |
 
 ### TFT 显示屏
-| 功能   | GPIO |
-|--------|------|
-| SCLK   | 14   |
-| SDA (MOSI) | 13 |
-| DC     | 11   |
-| CS     | 10   |
-| RST    | 12   |
+
+
+| 功能       | GPIO |
+| ---------- | ---- |
+| SCLK       | 14   |
+| SDA (MOSI) | 13   |
+| DC         | 11   |
+| CS         | 10   |
+| RST        | 12   |
 
 详见 [lgfx_conf.h](src/lgfx_conf.h) (LovyanGFX 配置)。
 
@@ -273,16 +286,20 @@ LCDWIKI 板型使用 ILI9341 屏幕、SDIO MicroSD、FT6336 触摸和板载 ES83
 ## Pin Configuration
 
 ### SD Card
+
+
 | Function | GPIO |
-|----------|------|
+| -------- | ---- |
 | CS       | 42   |
 | SCLK     | 40   |
 | MISO     | 39   |
 | MOSI     | 41   |
 
 ### Controller Buttons
+
+
 | Button | GPIO |
-|--------|------|
+| ------ | ---- |
 | A      | 48   |
 | B      | 47   |
 | SELECT | 16   |
@@ -293,20 +310,24 @@ LCDWIKI 板型使用 ILI9341 屏幕、SDIO MicroSD、FT6336 触摸和板载 ES83
 | RIGHT  | 18   |
 
 ### I2S Audio
+
+
 | Function | GPIO |
-|----------|------|
+| -------- | ---- |
 | BCLK     | 5    |
 | LRC      | 4    |
 | DOUT     | 6    |
 
 ### TFT Display
-| Function | GPIO |
-|----------|------|
-| SCLK     | 14   |
-| SDA (MOSI) | 13 |
-| DC       | 11   |
-| CS       | 10   |
-| RST      | 12   |
+
+
+| Function   | GPIO |
+| ---------- | ---- |
+| SCLK       | 14   |
+| SDA (MOSI) | 13   |
+| DC         | 11   |
+| CS         | 10   |
+| RST        | 12   |
 
 See [lgfx_conf.h](src/lgfx_conf.h) for the LovyanGFX configuration.
 
@@ -314,7 +335,6 @@ See [lgfx_conf.h](src/lgfx_conf.h) for the LovyanGFX configuration.
 Different ST7789 panel batches may require a different color-inversion command.
 If colors look inverted or washed out, toggle **Settings -> Display Inversion**.
 The change takes effect immediately and persists across reboots.
-
 
 ---
 
@@ -462,7 +482,7 @@ This simulation is only a preflight check for LCD SPI wiring, display orientatio
 ### 方式二：使用乐鑫 Flash Download Tool 烧录
 
 如果你自行生成了合并固件，可使用乐鑫官方烧录工具：
-下载地址：<https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32/production_stage/tools/flash_download_tool.html>
+下载地址：[https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32/production_stage/tools/flash_download_tool.html](https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32/production_stage/tools/flash_download_tool.html)
 
 1. 启动工具后，两个主机选择 **ESP32S3**，无线手柄选择 **ESP32C3**。
 2. 参考下图勾选并配置烧录项：
@@ -470,7 +490,6 @@ This simulation is only a preflight check for LCD SPI wiring, display orientatio
    <p align="center">
      <img src="./images/DIJI-NES_flash-download.png" alt="Flash Download Tool Example" width="80%">
    </p>
-
 3. 选择自己为对应硬件构建的 `_merged.bin`，烧录地址填写 **0x0**。
 4. 确认设备串口连接正常后，点击 **START** 开始烧录。
 5. 烧录完成后重启设备，即可进入 DIJI-NES。
@@ -478,7 +497,7 @@ This simulation is only a preflight check for LCD SPI wiring, display orientatio
 ### Option 2: Using Espressif Flash Download Tool
 
 If you generated a merged image locally, you can use Espressif's official Flash Download Tool:
-Download: <https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32/production_stage/tools/flash_download_tool.html>
+Download: [https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32/production_stage/tools/flash_download_tool.html](https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32/production_stage/tools/flash_download_tool.html)
 
 1. After launching the tool, select **ESP32S3** for either host or **ESP32C3** for the wireless gamepad.
 2. Follow the example below to select and configure the flashing items:
@@ -486,7 +505,6 @@ Download: <https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32
    <p align="center">
      <img src="./images/DIJI-NES_flash-download.png" alt="Flash Download Tool Example" width="80%">
    </p>
-
 3. Select the `_merged.bin` you built for the matching hardware and set the flash address to **0x0**.
 4. After confirming the serial port is connected correctly, click **START** to begin flashing.
 5. Reboot the device after flashing completes to start DIJI-NES.
@@ -635,16 +653,17 @@ This information is based on community feedback and troubleshooting experience.
 
 `esp32c3-gamepad` 环境使用 8 个独立实体按键，通过 ESP-NOW 发送 NES 手柄状态。所有按键均配置为 `INPUT_PULLUP`，每个按键的一端接对应 GPIO，另一端接 GND。
 
+
 | 按键 | ESP32-C3 GPIO |
-|------|----------------|
-| 上 | 0 |
-| 下 | 1 |
-| 左 | 3 |
-| 右 | 7 |
-| A | 10 |
-| B | 4 |
-| 选择 | 5 |
-| 开始 | 6 |
+| ---- | ------------- |
+| 上   | 0             |
+| 下   | 1             |
+| 左   | 3             |
+| 右   | 7             |
+| A    | 10            |
+| B    | 4             |
+| 选择 | 5             |
+| 开始 | 6             |
 
 在主机的“设置 -> 手柄”页面开启配对后，同时长按手柄的“选择 + 开始” 1.5 秒进入配对模式。GPIO8 保留给状态指示灯；GPIO2/8/9 是 ESP32-C3 启动配置引脚，因此 8 个按键不使用这些引脚。
 
@@ -697,18 +716,19 @@ python3 tools/serial_controller.py --port /dev/cu.usbmodemXXXX
 
 键位映射：
 
-| 电脑键盘 | NES 按键 |
-|----------|----------|
-| W/A/S/D  | UP/LEFT/DOWN/RIGHT |
-| O        | A |
-| P        | B |
-| Enter    | START |
-| Backspace 或右 Shift | SELECT |
-| Esc      | START + SELECT |
-| T        | 播放音频自检 beep |
-| G        | 切换下一组 I2S 音频路由 |
-| F        | 切换原生居中/横向全屏显示 |
-| Q        | 退出电脑端脚本 |
+
+| 电脑键盘             | NES 按键                  |
+| -------------------- | ------------------------- |
+| W/A/S/D              | UP/LEFT/DOWN/RIGHT        |
+| O                    | A                         |
+| P                    | B                         |
+| Enter                | START                     |
+| Backspace 或右 Shift | SELECT                    |
+| Esc                  | START + SELECT            |
+| T                    | 播放音频自检 beep         |
+| G                    | 切换下一组 I2S 音频路由   |
+| F                    | 切换原生居中/横向全屏显示 |
+| Q                    | 退出电脑端脚本            |
 
 脚本每 20ms 发送一次 `K:<hex>` 状态帧，例如 `K:01` 表示 A 被按下，`K:18` 表示 START+UP。固件会在 250ms 内没有收到新状态帧时自动清空虚拟按键，避免电脑端退出后按键卡住。
 
@@ -748,18 +768,19 @@ If only one USB serial device is connected, the script can usually auto-detect i
 
 Key mapping:
 
-| PC key | NES button |
-|--------|------------|
-| W/A/S/D | UP/LEFT/DOWN/RIGHT |
-| O | A |
-| P | B |
-| Enter | START |
-| Backspace or right Shift | SELECT |
-| Esc | START + SELECT |
-| T | Play audio test beep |
-| G | Switch to the next I2S audio route |
-| F | Toggle native centered/fullscreen display |
-| Q | Quit the PC script |
+
+| PC key                   | NES button                                |
+| ------------------------ | ----------------------------------------- |
+| W/A/S/D                  | UP/LEFT/DOWN/RIGHT                        |
+| O                        | A                                         |
+| P                        | B                                         |
+| Enter                    | START                                     |
+| Backspace or right Shift | SELECT                                    |
+| Esc                      | START + SELECT                            |
+| T                        | Play audio test beep                      |
+| G                        | Switch to the next I2S audio route        |
+| F                        | Toggle native centered/fullscreen display |
+| Q                        | Quit the PC script                        |
 
 Display mode note: NES video is `256x240`, while the landscape LCD is `320x240`. Native mode keeps the correct aspect with side margins. Fullscreen mode stretches horizontally to `320x240`.
 
