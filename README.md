@@ -8,7 +8,7 @@
 
 > ⚠️ **学习项目 / Learning Project**
 >
-> 这是一个用于学习 NES 模拟器原理和嵌入式系统编程的项目。部分功能仍在开发中。
+> 这是一个用于学习 NES 模拟器原理和嵌入式系统编程的项目。部分功能仍在开发中。QQ交流群：34974022
 >
 > This is a learning project for understanding NES emulation and embedded systems programming. Some features are still under development.
 
